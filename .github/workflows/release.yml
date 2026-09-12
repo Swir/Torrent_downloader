@@ -48,8 +48,7 @@ jobs:
         run: |
           package="Torrent_downloader-${VERSION}"
           mkdir -p "$package"
-          shopt -s dotglob extglob
-          cp -R !(.git|.github|"$package") "$package/"
+          rsync -a --exclude '.git' --exclude '.github' --exclude "$package" ./ "$package/"
           zip -r "${package}.zip" "$package"
           sha256sum "${package}.zip" > "${package}.zip.sha256"
           echo "ZIP_NAME=${package}.zip" >> "$GITHUB_ENV"
