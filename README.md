@@ -17,6 +17,12 @@
 
 </div>
 
+## 📸 Screenshot
+
+![Torrent_downloader application screenshot](docs/screenshots/application.jpg)
+
+The locally running web interface with an empty transfer list; no torrent transfer was started.
+
 ## 📍 Project Status
 
 | Item | Status |
